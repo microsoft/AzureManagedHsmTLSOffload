@@ -29,7 +29,7 @@ Azure Managed HSM TLS Offload supports the following algorithms.
 
 | **Mechanisms** | **Description** |
 |-----------|-----------|
-| Encryption and Decryption | RSA-OAEP, and RSA-PKCS supported. AES-CBC not supported through TLS Offload library. | 
+| Encryption and Decryption | RSA-OAEP, and RSA-PKCS supported. AES-CBC not supported through TLS Offload library. AES_CBC is supported through Managed HSM API only. | 
 | Sign and Verify | RSA, and ECDSA supported. SignRecover/VerifyRecover not supported. |
 | Hash/Digest | SHA256, SHA384, and SHA512 supported. |
 | Key Wrap | Not Supported through TLS Offload library. Key Wrap is supported through Managed HSM API only. |
