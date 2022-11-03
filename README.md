@@ -1,4 +1,6 @@
 # Introduction 
+Azure Managed HSM TLS Offload Library is Public Preview!
+
 Azure Managed HSM offers a TLS Offload library which is compliant with PKCS#11 version 2.40. We do not support all possible functions listed in the PKCS#11 specification. PKCS#11 is a standard for performing cryptographic operations on HSMs (hardware security modules) which is available in public preview.
 
 # Getting Started
@@ -94,6 +96,9 @@ Azure Managed HSM TLS Offload supports the following PKCS#11 API operations.
 # FAQ
 ### Can I create a Key in Azure Managed HSM then later use the TLS Offload library for that Key?
 No. Keys created without using the mhsm-pkcs11 TLS Offload Library are NOT compatible. A key must be created using either the mhsm_p11_create_key sample or a custom application that loads the mhsm-pkcs11 TLS Offload library and calls the appropriate PKCS#11 interface functions.
+
+### Can I use the TLS Offload library for production workloads?
+No, not at this time. Our TLS Offload library is available for public preview only. We do not recommend production workloads until general availability.
 
 ## Trademarks
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
