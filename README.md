@@ -98,7 +98,13 @@ Azure Managed HSM TLS Offload supports the following PKCS#11 API operations.
 No. Keys created without using the mhsm-pkcs11 TLS Offload Library are NOT compatible. A key must be created using either the mhsm_p11_create_key sample or a custom application that loads the mhsm-pkcs11 TLS Offload library and calls the appropriate PKCS#11 interface functions.
 
 ### Can I use the TLS Offload library for production workloads?
-No, not at this time. Our TLS Offload library is available for public preview only. We do not recommend production workloads until general availability.
+No. Our TLS Offload library is available for public preview only. We do not support or recommend production workloads until general availability.
+
+### Can I use my existing keys I created during Public Preview once TLS Offload Library is Generally Available for production?
+No. Customers will have to create new keys when our TLS Offload Library becomes generally available for production workloads.
+
+### Does TLS Offload Library support AES Keys? 
+No. Currently our TLS Offload Library does not support AES keys.
 
 ## Trademarks
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
