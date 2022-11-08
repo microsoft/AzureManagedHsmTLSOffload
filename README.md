@@ -24,7 +24,7 @@ Azure Managed HSM TLS Offload supports the following key types.
 |-----------|-----------|
 | RSA | Generate 2048, 3072 and 4096-bit RSA keys. |
 | ECDSA | Generate keys with P-256, P-256K, P-384, P-521 curves. |
-| AES | Generate 128, 192, and 256-bit AES keys. |
+| AES | We do not support AES keys currently. |
 
 #### Mechanisms 
 Azure Managed HSM TLS Offload supports the following algorithms. 
@@ -51,7 +51,6 @@ X indicates that Azure Managed HSM supports the mechanism for the function. We d
 | CKM_RSA_PKCS_PSS           | |X| | | | | |
 | CKM_EC_KEY_PAIR_GEN        | | | | |X| | |
 | CKM_ECDSA                  | |X| | | | | |
-| CKM_AES_KEY_GEN            | | | | |X| | |
 | CKM_SHA256                 | | | |X| | | |
 | CKM_SHA384                 | | | |X| | | |
 | CKM_SHA512                 | | | |X| | | |
