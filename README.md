@@ -105,7 +105,7 @@ No. Customers will have to create new keys when our TLS Offload Library becomes 
 ### Does the TLS Offload Library support AES Keys? 
 No. Currently our TLS Offload Library does not support AES keys. Customers that require AES keys should use the Azure Managed HSM REST API.
 
-### Does the TLS Offload Library support TLS V1.0
+### Does the TLS Offload Library support TLS V1.0 or TLS 1.1?
 No. We only support TLS 1.2 and TLS 1.3.
 
 ### Does the TLS Offload Library support Azure Key Vault and Azure Managed HSM?
