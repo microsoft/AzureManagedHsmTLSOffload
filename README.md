@@ -102,8 +102,14 @@ No. Our TLS Offload library is available for public preview only. We do not supp
 ### Can I use my existing keys I created during Public Preview once TLS Offload Library is Generally Available for production?
 No. Customers will have to create new keys when our TLS Offload Library becomes generally available for production workloads.
 
+### Does TLS Offload library support multiple Managed HSM resources?
+Yes. You can declare multiple resources in the mhsm-pkcs.conf. SlotId is the identifier for the Managed HSM resource which is unique.
+
+### Does TLS Offload library support multiple service principals?
+No. Our TLS Offload library does not support multiple service principles.
+
 ### Does the TLS Offload Library support AES Keys? 
-No. Currently our TLS Offload Library does not support AES keys. Customers that require AES keys should use the Azure Managed HSM REST API.
+No. Our TLS Offload Library does not support AES keys. Customers that require AES keys should use the Azure Managed HSM REST API.
 
 ### Does the TLS Offload Library support TLS V1.0 or TLS 1.1?
 No. We only support TLS 1.2 and TLS 1.3.
