@@ -22,14 +22,14 @@ Azure Managed HSM TLS Offload supports the following key types.
 |-----------|-----------|
 | RSA | Generate 2048, 3072 and 4096-bit RSA keys. |
 | ECDSA | Generate keys with P-256, P-256K, P-384, P-521 curves. |
-| AES | We do not support AES keys currently. |
+| AES | Not Supported |
 
 #### Mechanisms 
 Azure Managed HSM TLS Offload supports the following algorithms. 
 
 | **Mechanisms** | **Description** |
 |-----------|-----------|
-| Encryption and Decryption | RSA-OAEP, and RSA-PKCS supported. AES-CBC not supported through TLS Offload library. AES_CBC is supported through Managed HSM API only. | 
+| Encryption and Decryption | Not supported through TLS Offload library. Supported through Managed HSM API only. | 
 | Sign and Verify | RSA, and ECDSA supported. SignRecover/VerifyRecover not supported. |
 | Hash/Digest | SHA256, SHA384, and SHA512 supported. |
 | Key Wrap | Not Supported through TLS Offload library. Key Wrap is supported through Managed HSM API only. |
@@ -44,8 +44,8 @@ X indicates that Azure Managed HSM supports the mechanism for the function. We d
 | |  **Encrypt & Decrypt** | **Sign  & Verify** | **SR & VR** | **Digest** | **Gen Key/Key Pair** | **Wrap & Unwrap** | **Derive**|
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
 | CKM_RSA_PKCS_KEY_PAIR_GEN  | | | | |X| | |
-| CKM_RSA_PKCS               |X|X| | | | | |
-| CKM_RSA_PKCS_OAEP          |X| | | | | | |
+| CKM_RSA_PKCS               | |X| | | | | |
+| CKM_RSA_PKCS_OAEP          | | | | | | | |
 | CKM_RSA_PKCS_PSS           | |X| | | | | |
 | CKM_EC_KEY_PAIR_GEN        | | | | |X| | |
 | CKM_ECDSA                  | |X| | | | | |
@@ -75,19 +75,13 @@ Azure Managed HSM TLS Offload supports the following API operations.
 - C_FindObjects 
 - C_FindObjectsFinal 
 - C_GenerateKeyPair 
-- C_GenerateKey 
+- C_GenerateRandom 
 - C_GetAttributeValue 
 - C_SetAttributeValue 
-- C_GetOperationState 
-- C_SetOperationState 
 - C_SignInit 
 - C_Sign 
 - C_VerifyInit 
 - C_Verify 
-- C_EncryptInit 
-- C_Encrypt 
-- C_DecryptInit 
-- C_Decrypt 
 ***
 
 # FAQ
