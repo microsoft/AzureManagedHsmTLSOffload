@@ -86,12 +86,6 @@ Azure Managed HSM TLS Offload supports the following API operations.
 ### Can I create a Key in Azure Managed HSM then later use the TLS Offload library for that Key?
 No. Keys created without using the mhsm-pkcs11 TLS Offload Library are NOT compatible. A key must be created using either the mhsm_p11_create_key sample or a custom application that loads the mhsm-pkcs11 TLS Offload library and calls the appropriate interface functions.
 
-### Can I use the TLS Offload library for production workloads?
-No. Our TLS Offload library is available for public preview only. We do not support or recommend production workloads until general availability.
-
-### Can I use my existing keys I created during Public Preview once TLS Offload Library is Generally Available for production?
-No. Customers will have to create new keys when our TLS Offload Library becomes generally available for production workloads.
-
 ### Does TLS Offload library support multiple Managed HSM resources?
 Yes. You can declare multiple resources in the mhsm-pkcs.conf. SlotId is the identifier for the Managed HSM resource which is unique.
 
@@ -107,10 +101,10 @@ No. We only support TLS 1.2 and TLS 1.3.
 ### Does the TLS Offload Library support Azure Key Vault and Azure Managed HSM?
 No. Azure Key Vault is not supported.  Only Azure Managed HSM is supported through our TLS Offload Library.
 
-### How do I file issues or get help?
-This project uses GitHub Issues to track bugs and feature requests. Please search the existing issues before filing new issues to avoid duplicates. For new issues, file your bug or feature request as a new Issue. 
+### How do I file production support incidents or get help?
+All production incident support tickets for Azure Managed HSM or TLS Offload Library should be submitted through the Azure Portal under Help+Support. This TLS Offload Library project uses GitHub issues to only track bugs and feature requests not production live site support incidents. 
 
-- For help and questions about using this project for SSL Offloading / Keyless TLS with Azure Managed HSM please send email to [mhsmp11@microsoft.com](mailto:mhsmp11@microsoft.com).  For issues and bugs please *[submit issue or bug through github](https://github.com/microsoft/AzureManagedHsmTLSOffload/issues)* 
+- For help and questions about using this project for SSL Offloading / Keyless TLS with Azure Managed HSM please send email to [mhsmp11@microsoft.com](mailto:mhsmp11@microsoft.com).* 
 
 - For help and questions about F5 BigIP or Nginx issues or configuration please send email to [support@f5.com](mailto:support@f5.com) or submit through case management at *[my.f5.com](https://my.f5.com)* 
 
