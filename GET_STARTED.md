@@ -5,6 +5,8 @@ The TLS Offload Library internally uses the Azure Key Vault REST API to interact
 
 Installation including configuration and authentication requirements for TLS Offload can be found in the readme file within each .deb and .rpm release package under *[RELEASES](https://github.com/microsoft/AzureManagedHsmTLSOffload/releases)* 
 
+You can find here the list of *[TLS Offload supported Key Types & Mechanisms](https://github.com/microsoft/AzureManagedHsmTLSOffload#supported-key-types--mechanisms)*
+
 # Get Started 
 ### PKCS#11 Attributes
 To properly integrate with PKCS#11, generating keys (via C_GenerateKeyPair) and locating key objects (via C_FindObjectsInit/C_FindObjects) requires a solution for storing PKCS#11 attributes on the Azure Key Vault key object. The TLS Offload Library converts these necessary PKCS#11 attributes into Azure Key Vault Tags.
