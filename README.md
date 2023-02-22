@@ -2,7 +2,9 @@
 Azure Managed HSM offers a TLS Offload library which is compliant with PKCS#11 version 2.40. We do not support all possible functions listed in the PKCS#11 specification. Our TLS Offload library supports a limited set of functions and mechanisms for SSL/TLS Offload with F5 (BigIP) and Nginx only!
 
 # Getting Started
-Installation including configuration and authentication requirements for TLS Offload can be found in the readme within each .deb and .rpm package under *[RELEASES](https://github.com/microsoft/AzureManagedHsmTLSOffload/releases)* 
+Installation including configuration and authentication requirements for TLS Offload can be found in the readme file within each .deb and .rpm release package under *[RELEASES](https://github.com/microsoft/AzureManagedHsmTLSOffload/releases)* 
+
+Additional information can be found from *[Get Started](https://github.com/microsoft/AzureManagedHsmTLSOffload/blob/main/GET_STARTED.md)*
 
 ## Supported Operating Systems
 
