@@ -1,9 +1,9 @@
 # Azure Managed HSM TLS Offload Library  
 Azure Managed HSM offers a TLS Offload library which is compliant with PKCS#11 version 2.40. We do not support all possible functions listed in the PKCS#11 specification. Our TLS Offload library supports a limited set of mechanisms and interface functions for SSL/TLS Offload with F5 (BigIP) and Nginx only, primarily to generate TLS server certificate keys and generate digital signatures during TLS handshakes.
 
-Refer to *[Azure Managed HSM TLS Offload Library GitHub](https://github.com/microsoft/AzureManagedHsmTLSOffload)* for more information.
-
 The TLS Offload Library internally uses the Azure Key Vault REST API to interact with Azure Managed HSM.
+
+Installation including configuration and authentication requirements for TLS Offload can be found in the readme file within each .deb and .rpm release package under *[RELEASES](https://github.com/microsoft/AzureManagedHsmTLSOffload/releases)* 
 
 # Get Started 
 ### PKCS#11 Attributes
