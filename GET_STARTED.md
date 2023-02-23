@@ -172,7 +172,7 @@ a.	“Managed HSM Crypto User” role at the “/keys” scope.
   
 > az keyvault role definition create --hsm-name ContosoMHSM --role-definition '{ \
 >      "roleName": "TLS Library User Read Role", \
->      "description": "Grant Read access to keys", \ 
+>      "description": "Grant Read access to keys", \
 >      "actions": [], \
 >      "notActions": [], \
 >      "dataActions": ["Microsoft.KeyVault/managedHsm/keys/read/action"], \
