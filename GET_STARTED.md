@@ -32,8 +32,8 @@ The key creation tool reads the Service Principal credentials from the environme
 
 The key creation tool randomly generates a name for the key at the time of creation. The full Azure Key Vault Key ID and the Key Name are printed to the console for your convenience.
 
-> MHSM_CLIENT_ID="Service Principal Application Id" \
->    MHSM_CLIENT_SECRET="Service Principal Password" \
+> MHSM_CLIENT_ID="Service Principal Application Id" \/\
+>    MHSM_CLIENT_SECRET="Service Principal Password" \/\
 >    mhsm_p11_create_key --RSA 4K --label tlsKey
 >
 > Key is generated successfully. \
@@ -76,9 +76,9 @@ This is a simpler approach and suitable when the Azure Managed HSM is exclusivel
 
 Assign the Crypto User role to TLS Offload Service Principal at the “/keys” scope. This gives the TLS Offload Service Principal the permission to generate keys and find them for TLS Offloading.
  
-> az keyvault role assignment create --hsm-name ContosoMHSM \
->      --role "Managed HSM Crypto User"  \
->       --assignee TLSOffloadServicePrincipal@contoso.com  \
+> az keyvault role assignment create --hsm-name ContosoMHSM \/\
+>      --role "Managed HSM Crypto User"  \/\
+>       --assignee TLSOffloadServicePrincipal@contoso.com  \\/
 >       --scope /keys
 
 ### Granular Approach
@@ -110,14 +110,14 @@ The Admin User assigns the following roles to the TLS Offload Service Principal.
 
 In the following example, the key name is “p11-6a2155dc40c94367a0f97ab452dc216f”.
    
-> az keyvault role assignment create --hsm-name ContosoMHSM  \
->      --role "TLS Library User Read Role"  \
->      --assignee TLSOffloadServicePrincipal@contoso.com  \
+> az keyvault role assignment create --hsm-name ContosoMHSM  \/\
+>      --role "TLS Library User Read Role"  \/\
+>      --assignee TLSOffloadServicePrincipal@contoso.com  \/\
 >      --scope /keys
 >
-> az keyvault role assignment create --hsm-name ContosoMHSM  \
->      --role "Managed HSM Crypto User"  \
->      --assignee TLSOffloadServicePrincipal@contoso.com  \
+> az keyvault role assignment create --hsm-name ContosoMHSM  \/\
+>      --role "Managed HSM Crypto User"  \/\
+>      --assignee TLSOffloadServicePrincipal@contoso.com  \/\
 >      --scope /keys/p11-6a2155dc40c94367a0f97ab452dc216f
 
 # How To
@@ -132,8 +132,8 @@ The key creation tool reads the Service Principal credentials from the environme
 
 The key creation tool randomly generates a name for the key at the time of creation. The full Azure Key Vault Key ID and the Key Name are printed to the console for your convenience.
   
-> MHSM_CLIENT_ID="Service Principal Application Id" \
->    MHSM_CLIENT_SECRET="Service Principal Password" \
+> MHSM_CLIENT_ID="Service Principal Application Id" \/\
+>    MHSM_CLIENT_SECRET="Service Principal Password" \/\
 >    mhsm_p11_create_key --RSA 4K --label tlsKey
 >
 > Key is generated successfully. \
@@ -153,9 +153,9 @@ There are two approaches to generating a key and using the key for the Key Less 
 1.	Create a Service Principal for the TLS Offload Library (e.g., TLSOffload ServicePrincipal)
 2.	Assign “Managed HSM Crypto User” role to the TLS Offload Service Principal at the “/keys” scope.
  
-> az keyvault role assignment create --hsm-name ContosoMHSM \
->      --role "Managed HSM Crypto User"  \
->       --assignee TLSOffloadServicePrincipal@contoso.com  \
+> az keyvault role assignment create --hsm-name ContosoMHSM \/\
+>      --role "Managed HSM Crypto User"  \/\
+>       --assignee TLSOffloadServicePrincipal@contoso.com  \/\
 >       --scope /keys
 
 3.	Generate key with required label following How to generate keys using the TLS Offload Library.  
@@ -186,14 +186,14 @@ a.	“Managed HSM Crypto User” role at the “/keys” scope.
   a.	“TLS Library User Read Role” role at the “/keys” scope
   b.	“Managed HSM Crypto User” role at the “/keys/{key name}” scope
   
-> az keyvault role assignment create --hsm-name ContosoMHSM  \
->      --role " TLS Library User Read Role"  \
->      --assignee TLSOffloadServicePrincipal @contoso.com  \
+> az keyvault role assignment create --hsm-name ContosoMHSM  \/\
+>      --role " TLS Library User Read Role"  \/\
+>      --assignee TLSOffloadServicePrincipal @contoso.com  \/\
 >      --scope /keys
 >
-> az keyvault role assignment create --hsm-name ContosoMHSM  \
->      --role "Managed HSM Crypto User"  \
->      --assignee TLSOffloadServicePrincipal@contoso.com  \
+> az keyvault role assignment create --hsm-name ContosoMHSM  \/\
+>      --role "Managed HSM Crypto User"  \/\
+>      --assignee TLSOffloadServicePrincipal@contoso.com  \/\
 >      --scope /keys/p11-6a2155dc40c94367a0f97ab452dc216f
 
 7.	Configure the TLS server to use the Managed HSM TLS Offload Library as the PKCS#11 interface library
