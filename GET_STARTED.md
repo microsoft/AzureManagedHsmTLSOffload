@@ -196,5 +196,5 @@ a.	“Managed HSM Crypto User” role at the “/keys” scope.
 >      --assignee TLSOffloadServicePrincipal@contoso.com  \
 >      --scope /keys/p11-6a2155dc40c94367a0f97ab452dc216f
 
-6.	Configure the TLS server to use the Managed HSM TLS Offload Library as the PKCS#11 interface library
-7.	Configure the TLS server (e.g., the nginx SSL configuration setting `ssl_certificate_key’) with the key label and the TLS Offload Service Principal credentials
+7.	Configure the TLS server to use the Managed HSM TLS Offload Library as the PKCS#11 interface library
+8.	Configure the TLS server (e.g., the nginx SSL configuration setting `ssl_certificate_key’) with the key label and the TLS Offload Service Principal credentials
