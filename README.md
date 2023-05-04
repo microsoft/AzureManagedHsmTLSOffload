@@ -103,6 +103,11 @@ No. We only support TLS 1.2 and TLS 1.3.
 ### Does the TLS Offload Library support Azure Key Vault and Azure Managed HSM?
 No. Azure Key Vault is not supported.  Only Azure Managed HSM is supported through our TLS Offload Library.
 
+### How can I improve TLS Offload Library performance? 
+1. Turn OFF all the logging in the MHSM configuration file.
+2. Connection Caching must be configured to match the concurrent signing requests issued by your application. Refer to *[Connection Caching](https://learn.microsoft.com/azure/key-vault/managed-hsm/tls-offload-library#connection-caching)* for configuration. 
+3. For optimal performance your application should be hosted/collocated in the same region as your HSM pool. 
+
 ### How do I file production support incidents or get help?
 All production incident support tickets for Azure Managed HSM or TLS Offload Library should be submitted through the Azure Portal under Help+Support. This TLS Offload Library project uses GitHub issues to only track bugs and feature requests not production live site support incidents. 
 
