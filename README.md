@@ -108,6 +108,20 @@ No. Azure Key Vault is not supported.  Only Azure Managed HSM is supported throu
 2. Connection Caching must be configured to match the concurrent signing requests issued by your application. Refer to *[Connection Caching](https://learn.microsoft.com/azure/key-vault/managed-hsm/tls-offload-library#connection-caching)* for configuration. 
 3. For optimal performance your application should be hosted/collocated in the same region as your HSM pool. 
 
+### How do I use the Key Creation Tool included in the TLS Offload Library?
+To Get Started refer to the *[ TLS Offload Library Overview](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/tls-offload-library)*
+
+The TLS Offload Library includes a key creation tool: mhsm_p11_create_key.  The key creation tool requires a Service Principal which is assigned to the “Managed HSM Crypto User” role at the “/keys” scope.  The key creation tool reads the Service Principal credentials from the environment variables MHSM_CLIENT_ID and MHSM_CLIENT_SECRET.  
+-	MHSM_CLIENT_ID – must be set to the Service Principal’s Application (Client) ID 
+-	MHSM_CLIENT_SECRET – must be set to the Service Principal’s Password (Client Secret) 
+
+For managed identities, these environment variables are not needed.  
+-	Use the “--identity” argument to enable managed identity with mhsm_p11_create_key tool. 
+-	The “client_id” of user-assigned managed identity should be mentioned in the mhsm configuration file (mhsm-pkcs11.conf). If “client_id” of user-assigned managed identity is not provided it will consider it as system-assigned managed identity. 
+
+### How do I configure my TLS server to use the Managed HSM TLS Offload Library as the interface library 
+Configure your TLS server (e.g. the nginx SSL configuration setting `ssl_certificate_key’) with the key label and the TLS Offload Service Principal credentials. For MSI (managed service identity) use empty credentials or enable it via TLS offload mhsm configuration file (mhsm-pkcs11.conf) and “client_id” of user-assigned managed identities. If MSI is enabled via TLS offload mhsm configuration file (mhsm-pkcs11.conf), then the service principal credentials will be ignored.
+
 ### How do I file production support incidents or get help?
 All production incident support tickets for Azure Managed HSM or TLS Offload Library should be submitted through the Azure Portal under Help+Support. This TLS Offload Library project uses GitHub issues to only track bugs and feature requests not production live site support incidents. 
 
