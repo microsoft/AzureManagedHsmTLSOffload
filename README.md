@@ -9,10 +9,12 @@ Additional information can be found from *[Get Started](https://github.com/micro
 ## Supported Operating Systems
 
 - CentOS 7 
-- Ubuntu 18.04
+- Ubuntu 20.04
 - CBL Mariner 2 
 
 *CentOS 8 is not supported! Red Hat no longer supports CentOS 8 as it reached end of life December 31st, 2021.*
+
+*Ubuntu 18.04 is not supported! Ubuntu no longer supports 18.04 as it reached end of life April 30th, 2023.*
 *** 
 
 ## Supported Key Types & Mechanisms
