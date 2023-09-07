@@ -10,6 +10,7 @@ Additional information can be found from *[Get Started](https://github.com/micro
 
 - CentOS 7 
 - Ubuntu 20.04
+- Ubuntu 22.04
 - CBL Mariner 2 
 
 *CentOS 8 is not supported! Red Hat no longer supports CentOS 8 as it reached end of life December 31st, 2021.*
