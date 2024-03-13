@@ -104,6 +104,9 @@ No. Our TLS Offload Library does not support AES keys. Customers that require AE
 ### Does the TLS Offload Library support TLS V1.0 or TLS 1.1?
 No. We only support TLS 1.2 and TLS 1.3.
 
+### Does the TLS Offload Library support libp11 v0.4.12?
+No. libp11 v04.11 is the version included with Ubuntu 22.04 and supported by the TLS Offload Library. Newer versions of libp11, including v0.4.12 are not currently supported.
+
 ### Does the TLS Offload Library support Azure Key Vault and Azure Managed HSM?
 No. Azure Key Vault is not supported.  Only Azure Managed HSM is supported through our TLS Offload Library.
 
