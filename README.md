@@ -10,7 +10,8 @@ Additional information can be found from *[Get Started](https://github.com/micro
 
 - Ubuntu 20.04
 - Ubuntu 22.04
-- CBL Mariner 2 
+- RHEL 8.8 
+- SLES 15.4
 
 *Mariner 2 (Azure Linux 2.0) is not supported! Mariner 2 reached end of life on July 31st, 2025*
 
