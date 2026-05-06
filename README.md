@@ -11,7 +11,7 @@ Additional information can be found from *[Get Started](https://github.com/micro
 - Ubuntu 20.04
 - Ubuntu 22.04
 - RHEL 8.8 
-- SLES 15.4
+- SLES 15.4 SP4 to SP7
 
 *Mariner 2 (Azure Linux 2.0) is not supported! Mariner 2 reached end of life on July 31st, 2025*
 
