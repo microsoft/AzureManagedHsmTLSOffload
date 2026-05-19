@@ -13,6 +13,7 @@ Additional information can be found from *[Get Started](https://github.com/micro
 - RHEL 8.10
 - RHEL 10.1
 - SLES 15.4 SP4 to SP7
+- SLES 15.7
 - SLES 16.0
 
 *Mariner 2 (Azure Linux 2.0) is not supported! Mariner 2 reached end of life on July 31st, 2025*
