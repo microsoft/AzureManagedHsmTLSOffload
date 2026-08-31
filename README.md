@@ -6,8 +6,10 @@ Installation including configuration and authentication requirements for TLS Off
 
 Additional information can be found from *[Get Started](https://github.com/microsoft/AzureManagedHsmTLSOffload/blob/main/GET_STARTED.md)*
 
-## Supported Operating Systems
+The latest releases of the TLS Offload Library support multiple operating system distributions and workloads, including integrations with NGINX and SAP. Customers requiring F5 BIG-IP integration and retaining a dependency on CentOS must use TLS Offload Library version 
+*[v1.1.0.02829](https://github.com/microsoft/AzureManagedHsmTLSOffload/releases/tag/v1.1.0.02829)*, which remains the validated release for F5 Big-IP deployment scenario.
 
+## Supported Operating Systems
 - Ubuntu 20.04
 - Ubuntu 22.04
 - RHEL 8.10
@@ -20,7 +22,7 @@ Additional information can be found from *[Get Started](https://github.com/micro
 
 *Ubuntu 18.04 is not supported! Ubuntu no longer supports 18.04 as it reached end of life April 30th, 2023.*
 
-*CentOS 7 is not supported! Red Hat no longer supports CentOS 7 as it reached end of life June 30th, 2023*
+*CentOS 7 is not supported! Red Hat no longer supports CentOS 7 as it reached end of life June 30th, 2023. While CentOS 7 is end of life, customers requiring F5 BIG-IP integration and retaining a dependency on CentOS must use TLS Offload Library version [v1.1.0.02829](https://github.com/microsoft/AzureManagedHsmTLSOffload/releases/tag/v1.1.0.02829), which remains supported by Microsoft and F5 for that deployment scenario.*
 
 *CentOS 8 is not supported! Red Hat no longer supports CentOS 8 as it reached end of life December 31st, 2021.*
 
